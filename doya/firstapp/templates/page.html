@@ -28,7 +28,7 @@
 
         <div>
             <div>
-                <h2>상세정보</h2>
+                <h2>기본정보</h2>
             <div>
             <div>
                 <ul>
@@ -44,9 +44,22 @@
         <div>
             <div>
                 <h2>상세정보</h2>
-            </div>
+            </div> 
             <div>
-                <p>{{ post_object.memo }}</p>
+                <ul>
+                    <li>활동내용</li>
+                        <div>
+                            <p name='memo1'>{{ post_object.memo1 }}</p>
+                        </div>
+                    <li>지원방법</li>
+                        <div>
+                            <p name='memo2'>{{ post_object.memo2 }}</p>
+                        </div>
+                    <li>비고</li>    
+                        <div>
+                            <p name='memo3'>{{ post_object.memo3 }}</p>
+                        </div>
+                </ul>
             </div>
         </div>
         

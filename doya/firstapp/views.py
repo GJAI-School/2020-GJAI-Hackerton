@@ -76,15 +76,11 @@ area_lst = ['서울특별시', '인천광역시', '경기도', '강원도',
 voluteer_type_lst = ['자연환경보호활동', '지역사회봉사활동', '기술지원', '업무보조', 
                     '정서지원', '기타봉사', '생활지원', '전문봉사']
 
-affiliation_lst = ['자원봉사자', '기관']
-
-
 def write_page(request):
 
     context = {
         'area_lst' : area_lst,
         'voluteer_type_lst' : voluteer_type_lst,
-        'affiliation_lst' : affiliation_lst
     }
 
 
@@ -95,8 +91,9 @@ def write_page(request):
             term = request.POST['term'],
             volunteer_type = request.POST['volunteer_type'],
             how_many = request.POST['how_many'],
-            photo = request.POST['photo'],
-            memo = request.POST['memo'],
+            memo1 = request.POST['memo1'],
+            memo2 = request.POST['memo2'],
+            memo3 = request.POST['memo3'],
             name = request.POST['name'],
             email = request.POST['email'],
             phone_num = request.POST['phone_num'],
