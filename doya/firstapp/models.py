@@ -23,18 +23,20 @@ affiliation_lst = (('volunteer', '자원봉사자'),('agency', '기관'))
 
 class write_post(models.Model):
     title = models.CharField(max_length=50, blank=True)
+    create_data = models.DateField(null=True, blank=True)
 
     area = models.CharField(choices=area_lst, max_length=17, null=True, blank=True)
-    term = models.CharField(max_length=100, blank=True)
-    volunteer_type = models.CharField(choices=voluteer_type_lst, max_length=8, null=True, blank=True)
+    start_data = models.DateField(null=True, blank=True)
+    end_data = models.DateField(null=True, blank=True)
+    voluteer_type = models.CharField(choices=voluteer_type_lst, max_length=8, null=True, blank=True)
     how_many = models.IntegerField(null=True, blank=True)
     
-    photo = models.ImageField(blank=True, null=True)
+    mainphoto = models.ImageField(blank=True, null=True)
     memo = models.CharField(max_length=1000, blank=True)
 
     hits = models.IntegerField(null=True, blank=True)
 
     name = models.CharField(max_length=50, blank=True)
-    email = models.CharField(max_length=50, blank=True)
+    mail = models.CharField(max_length=50, blank=True)
     phone_num = models.CharField(max_length=30)
     affiliation = models.CharField(choices=affiliation_lst, max_length=9, null=True, blank=True)
