@@ -70,12 +70,12 @@
                 <ul>
                     {% for post in post_lst %}
                     <tr>
-                    <td width=50><p align=center>{{ post.id }}</p></td>
+                    <td width=50><p align=center>{{ post.pk }}</p></td>
                     <td width=100><p align=center>{{ post.name }}</p></td>
                     <td width=100><p align=center>{{ post.area }}</p></td>
                     <td width=320>
                         <p align=center>
-                            <a href="/page?memo_id={{ post.id }}&current_page={{ current_page }}&searchStr=None" title="{{ post.title}}">{{ post.title }}
+                            <a href="/post/page/{{ post.pk }}" title="{{ post.title }}">{{ post.title }}
                         </p>
                     </td>
                     <td width=100><p align=center>{{ post.term }}</p></td>
@@ -94,7 +94,7 @@
             <tr>
                 <td>
                 {% for page in total_page_lst %}
-                <a href="/post?current_page={{page}}" >
+                <a href="/post" >
                 [
                 {% ifequal page current_page %}
                     <b>

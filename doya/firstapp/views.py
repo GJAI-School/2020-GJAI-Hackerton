@@ -26,11 +26,14 @@ def post(request):
     helper = page_helper()
     total_page_lst = helper.getTotalPage_lst(total_cnt, row_per_page)
 
-    return render(request, 'post.html',
-                            {'post_lst' : post_lst,
-                            'total_cnt' : total_cnt,
-                            'current_page' : current_page,
-                            'total_page_lst' : total_page_lst})
+    context = {
+        'post_lst' : post_lst,
+        'total_cnt' : total_cnt,
+        'current_page' : current_page,
+        'total_page_lst' : total_page_lst
+    }
+
+    return render(request, 'post.html', context)
 
 
 class page_helper:
@@ -55,8 +58,14 @@ class page_helper:
 
 
 
-def page(request):
-    return render(request, 'page.html')
+def page(request, post_pk):
+    post_object = write_post.objects.get(pk=post_pk)
+
+    context = {
+        'post_object' : post_object
+    }
+
+    return render(request, 'page.html', context)
 
 
 area_lst = ['서울특별시', '인천광역시', '경기도', '강원도',
@@ -97,17 +106,3 @@ def write_page(request):
         return redirect('post')
 
     return render(request, 'write_page.html', context)
-
-
-# def add(request, student_pk):
-#     student_object = AiStudents.objects.get(pk=student_pk)
-
-#     if request.method == 'POST':
-#         StudentPost.objects.create(
-#             intro_text = request.POST['intro_text'],
-#             writer = student_object
-#         )
-
-#         return redirect('detail', student_pk)
-
-#     return render(request, 'add.html')
