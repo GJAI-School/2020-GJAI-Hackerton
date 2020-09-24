@@ -173,4 +173,11 @@ header .menu_img{
     letter-spacing: normal;
     text-align: center;
     z-index: 3;
+    color: #ffffff;
+}
+
+.main_img{
+    max-width: 100%;
+    margin-top: 20px;
+    border: solid 1px #707070;
 }
