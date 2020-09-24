@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href='{% static "search.css" %}'>
     <title>Document</title>
+    <style type="text/css"> 
+        .menubar a { text-decoration:none ; color:white }
+        .head_2 a { text-decoration:none ; color:white }
+        .lists a { text-decoration:none ; color:black }
+    </style>
 </head>
 <body>
-<header>
+    <header>
         <div class="head_1">
-            <img class="title" src="static/img/header.jpg">
+            <img class="title" src="{% static 'img/header.jpg'%}">
             <div class="head_1_text1">위기경보 심각</div> 
-            <div class='head_1_text2'>코로나바이러스감염증-19</div> 
+            <div class='head_1_text2'>코로나바이러스감염증-19</div>
         </div>
         <div class="head_2">
-            <div class="name">DOYA</div>
+            <div><a class="name" href='{% url 'main' %}'>DOYA</a></div>
             <div class="search_bar">
                 <div class="head_2_text">
-                    <img class="login_img" src="static/img/login.PNG">
+                    <img class="login_img" src="{% static 'img/login.PNG'%}">
                     <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
                 </div>
-                <div><a href='{% url 'search' %}'><img class="search_img" src="static/img/search.PNG"></a></div>
-                <div><img class="menu_img" src="static/img/menu.PNG"></div>
+                <div><img class="search_img" src="{% static 'img/search.PNG'%}"></div>
+                <div><img class="menu_img" src="{% static 'img/menu.PNG'%}"></div>
             </div>
         </div>
     </header>
+  
+    <nav class="menubar">
+        <ul>
+            <li><a href='{% url 'post' %}'>모집중</a></li>
+            <li><a>봉사후기</a></li>
+            <li><a>봉사후기</a></li>
+        </ul>
+        <div class="right_box">
+            <div class="right_m">+ 제안하기</div>   
+        </div>
+    </nav>
 
     <contain>
         <div>
