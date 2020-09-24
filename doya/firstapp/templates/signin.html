@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class='form-header'>
+        <h1>hello world</h1>
+        <p>create a new account<p>
+    </header>
+
+    <form action='{% url 'signin' %}' method='POST'> {% csrf_token %}
+        <div>
+            <label for='user_id'>아이디를 입력하세요</label>
+            <input name='user_id'/>
+        </div>
+        <div>
+            <label for='user_pw'>비밀번호를 입력하세요</label>
+            <input name='user_pw'/>
+            <br/>
+            <label for='user_pw_check'>비밀번호를 한번더 입력하세요</label>
+            <input name='user_pw_check'/>
+        </div>
+        <div>
+            <label for='name'>이름을 입력하세요</label>
+            <input name='name'/>
+        </div>
+        <div>
+            <label for='birth'>생년월일</label>
+            <input name='birth'/>
+        </div>
+        <div>
+            <label for='email'>이메일을 입력하세요</label>
+            <input name='email'/>
+        </div>
+        <div>
+            <label for='phone_num'>휴대폰번호를 입력하세요</label>
+            <input name='phone_num'/>
+        </div>
+        <div>
+            <filedset>
+                <label for='user_type_1', class='radio_label'>자원봉사자</label>
+                <input id='user_type_1',
+                       name='user_type',
+                       type='radio',
+                       value='봉사자'/>         
+                <label for='user_type_2', class='radio_label'>기관</label>
+                <input id='user_type_2',
+                       name='user_type',
+                       type='radio',
+                       value='기관'/>
+        </div>
+        <button type='submit'>등록하기</button>
+    </form>
+        <a href='{% url 'main' %}'>뒤로가기</a>
+
+</body>
+</html>
