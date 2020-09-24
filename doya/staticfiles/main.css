@@ -208,15 +208,6 @@ header .menu_img{
 
 }
 
-.main_box2{
-    width: 100%;
-    height: 800px;
-    margin-top: 50px;
-    border: solid 1px;
-    border-color: #707070;
-    margin-top: 50px;
-}
-
 .main_text1{
     display: flex;
     justify-content: center;
@@ -277,7 +268,6 @@ header .menu_img{
     opacity: 0.88;
     background-color: #ebebff;
 }
-<<<<<<< Updated upstream
 
 .company_name{
     display: flex;
@@ -366,9 +356,9 @@ header .menu_img{
     max-width: 250px; /* 넓이를 지정 */
     height: auto; /* 높이를 지정 */
     margin: 30px; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-}
+
 .company_text{
-    white-space:nowrap;
+    white-space:nowrap
     display: flex;
     justify-content: center;
     align-items: center;
@@ -385,7 +375,7 @@ header .menu_img{
 
 .company_click{
     padding-top: 70px;
-    white-space:nowrap;
+    white-space:nowrap
     display: flex;
     justify-content: center;
     align-items: center;
@@ -425,53 +415,4 @@ header .menu_img{
     height: 600px;
     margin-left: 300px;
 
-=======
-
-.company_name{
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    font-family: NanumSquareB;
-    font-size: 50px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.13;
-    letter-spacing: normal;
-    text-align: center;
-    color: #313165;
-}
-
-.company_text{
-    white-space:nowrap
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: NanumSquareL;
-    font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.12;
-    letter-spacing: normal;
-    text-align: center;
-    color: #000000;
-}
-
-.company_click{
-    padding-top: 70px;
-    white-space:nowrap
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: NanumSquareL;
-    font-size: 20px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.12;  
-    letter-spacing: normal;
-    text-align: center;
-    color: #000000;
->>>>>>> Stashed changes
 }

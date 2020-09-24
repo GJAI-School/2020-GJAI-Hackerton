@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css"> 
-        a { text-decoration:none ; color:black}
+        a { text-decoration:none; color:withe}
     </style>
+    <link rel ="stylesheet" href='{%static "write_page.css"%}'>
     <title>Document</title>
 </head>
 <body>
@@ -23,11 +25,11 @@
             <div class="name">DOYA</div>
             <div class="search_bar">
                 <div class="head_2_text">
-                    <img class="login_img" src="static/img/login.PNG">
+                    <img class="login_img" src="{% static 'img/login.PNG'%}">
                     <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
                 </div>
-                <div><img class="search_img" src="static/img/search.PNG"></div>
-                <div><img class="menu_img" src="static/img/menu.PNG"></div>
+                <div><img class="search_img" src="{% static 'img/search.PNG'%}"></div>
+                <div><img class="menu_img" src="{% static 'img/menu.PNG'%}"></div>
             </div>
         </div>
     </header>
@@ -49,73 +51,74 @@
     </nav>
 
     <contain>
-        <div>
-            <h1>write_page</h1>
-        </div>
-        <div>
-            <form action='{% url 'write_page' %}' method='POST'> {% csrf_token %}
-                <div>
-                    <label for='title'>제목</label>
-                    <input name='title'/>
-                </div>
-                <div>
-                    <label for='area'>지역</label>
-                    <select name='area' size=1>
-                    {% for area in area_lst %}
-                        <option value={{ area }}>{{ area }}</option>
-                    {% endfor %}
-                    </select>
-                </div>
-                <div>
-                    <label for='term'>기간</label>
-                    <input name='term'/>
-                </div>
-                <div>
-                    <label for='volunteer_type'>타입</label>
-                    <select name='volunteer_type' size=1>
-                    {% for voluteer_type in voluteer_type_lst%}
-                        <option value={{ voluteer_type }}>{{ voluteer_type }}</option>
-                    {% endfor %}
-                    </select>
-                </div>
-                <div>
-                    <label for='how_many'>인원</label>
-                    <input name='how_many'/>
-                </div>
-                <div>
-                    <label for='memo1'>활동내용</label>
-                    <textarea id='memo1' name='memo1'></textarea>
-                </div>
-                <div>
-                    <label for='memo2'>지원방법</label>
-                    <textarea id='memo2' name='memo2'></textarea>
-                </div>
-                <div>
-                    <label for='memo3'>비고</label>
-                    <textarea id='memo3' name='memo3'></textarea>
-                </div>
-                 <div>
-                    <label for='name'>이름</label>
-                    <input name='name'/>
-                </div>
-                 <div>
-                    <label for='email'>이메일</label>
-                    <input name='email'/>
-                </div>
-                 <div>
-                    <label for='phone_num'>휴대폰 전화번호</label>
-                    <input name='phone_num'/>
-                </div>
-                <div>
-                    <label for='affiliation'>봉사주관지</label>
-                    <input name='affiliation'/>
-
-                </div>
-                <button type='submit'>등록하기</button>
-            </form>
-        </div>
-        <div>
-            <a href='{% url 'post' %}'>뒤로가기</a>
+        <div class = "bigbox">
+            <div>
+                <h1>write_page</h1>
+            </div>
+            <div>
+                <form class="form_box" action='{% url 'write_page' %}' method='POST'> {% csrf_token %}
+                    <div>
+                        <label for='title'>제목</label>
+                        <input name='title'/>
+                    </div>
+                    <div>
+                        <label for='area'>지역</label>
+                        <select name='area' size=1>
+                        {% for area in area_lst %}
+                            <option value={{ area }}>{{ area }}</option>
+                        {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for='term'>기간</label>
+                        <input name='term'/>
+                    </div>
+                    <div>
+                        <label for='volunteer_type'>타입</label>
+                        <select name='volunteer_type' size=1>
+                        {% for voluteer_type in voluteer_type_lst%}
+                            <option value={{ voluteer_type }}>{{ voluteer_type }}</option>
+                        {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for='how_many'>인원</label>
+                        <input name='how_many'/>
+                    </div>
+                    <div>
+                        <label for='photo'>사진첨부</label>
+                        <input name='photo'/>
+                    </div>
+                    <div>
+                        <label for='memo'>내용</label>
+                        <textarea id='memo' name='memo'></textarea>
+                    </div>
+                    <div>
+                        <label for='name'>이름</label>
+                        <input name='name'/>
+                    </div>
+                    <div>
+                        <label for='email'>이메일</label>
+                        <input name='email'/>
+                    </div>
+                    <div>
+                        <label for='phone_num'>휴대폰 전화번호</label>
+                        <input name='phone_num'/>
+                    </div>
+                    <div>
+                        <label for='affiliation'>소속</label>
+                        <select name='affiliation' size=1>
+                        {% for affiliation in affiliation_lst %}
+                            <option value={{ affiliation }}>{{ affiliation }}</option>
+                        {% endfor %}
+                        </select>
+                    </div>
+                    <button type='submit'>등록하기</button>
+                </form>
+            </div>
+            <div>
+                <a href='{% url 'post' %}'>뒤로가기</a>
+            </div>
         </div>
     </contrain>
 </body>

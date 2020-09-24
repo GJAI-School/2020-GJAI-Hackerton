@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel ="stylesheet" href="{% static 'post.css' %}">
     <style type="text/css"> 
         a { text-decoration:none ; color:black}
@@ -24,8 +26,10 @@
                     <img class="login_img" src="{% static 'img/login.PNG'%}">
                     <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
                 </div>
+
                 <div><img class="search_img" src="{% static 'img/search.PNG'%}"></div>
                 <div><img class="menu_img" src="{% static 'img/menu.PNG'%}"></div>
+
             </div>
         </div>
     </header>
