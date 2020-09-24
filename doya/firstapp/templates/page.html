@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css"> 
+        a { text-decoration:none ; color:black}
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -23,19 +26,20 @@
 
     <contain>
         <div>
-            <p>제목</p>
+            <h2>{{ post_object.title }}</h2>
         </div>
+
         <div>
             <div>
                 <h2>기본정보</h2>
-            </div>
+            <div>
             <div>
                 <ul>
-                    <li>봉사지역</li>
-                    <li>봉사주관지</li>
-                    <li>봉사유형</li>
-                    <li>봉사기관</li>
-                    <li>모집인원</li>
+                    <li>봉사지역 : {{ post_object.area }}</li>
+                    <li>봉사주관지 : {{ post_object.affiliation }}</li>
+                    <li>봉사유형 : {{ post_object.volunteer_type }}</li>
+                    <li>봉사기간 : {{ post_object.term }}</li>
+                    <li>모집인원 : {{ post_object.how_many }}</li>
                 </ul>
             </div>
         </div>
@@ -43,9 +47,22 @@
         <div>
             <div>
                 <h2>상세정보</h2>
-            </div>
+            </div> 
             <div>
-                <p>내용</p>
+                <ul>
+                    <li>활동내용</li>
+                        <div>
+                            <p name='memo1'>{{ post_object.memo1 }}</p>
+                        </div>
+                    <li>지원방법</li>
+                        <div>
+                            <p name='memo2'>{{ post_object.memo2 }}</p>
+                        </div>
+                    <li>링크</li>    
+                        <div>
+                            <p name='memo3'>{{ post_object.memo3 }}</p>
+                        </div>
+                </ul>
             </div>
         </div>
         
@@ -55,14 +72,13 @@
             </div>
             <div>
                 <ul>
-                    <li>이름</li>
-                    <li>이메일</li>
-                    <li>연락처</li>
-                    <li>소속</li>
+                    <li>{{ post_object.name }}</li>
+                    <li>{{ post_object.email }}</li>
+                    <li>{{ post_object.phone_num }}</li>
                 </ul>
             </div>
         </div>
-    </contain>
+    </contain> 
     <a href='{% url 'post' %}'>뒤로가기</a>
 </body>
 </html>
