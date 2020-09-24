@@ -46,38 +46,39 @@
     <contain>
         <table cellspacing=1 width=700 border=0>
             <tr>
-                <td>총 게시물수: {{ totalCnt }}</td>
+                <td>총 모집 건수: {{ total_cnt }}</td>
                 <td><p align=right> 페이지:{{ current_page }}</td>
             </tr>
         </table>
 
         <table cellspacing=1 width=700 border=1>
             <tr>
-                <td width=50><p align=center>번호</p>
-                </td>
-                <td width=100><p align=center>이름</p>
-                </td>
-                <td width=320><p align=center>제목</p>
-                </td>
-                <td width=100><p align=center>등록일</p>
-                </td>
-                <td width=100><p align=center>조회수</p>
-                </td>
+                <td width=50><p align=center>번호</p></td>
+                <td width=100><p align=center>이름</p></td>
+                <td width=100><p align=center>지역</p></td>
+                <td width=320><p align=center>제목</p></td>
+                <td width=100><p align=center>활동기간</p></td>
+                <td width=100><p align=center>봉사유형</p></td>
+                <td width=100><p align=center>모집인원</p></td>
+                <td width=100><p align=center>조회수</p></td>
             </tr>
 
-            {% if boardList %}
+            {% if post_lst %}
                 <ul>
-                    {% for boardRow in boardList %}
+                    {% for post in post_lst %}
                     <tr>
-                    <td width=50><p align=center>{{ boardRow.id }}</p></td>
-                    <td width=100><p align=center>{{ boardRow.name }}</p></td>
+                    <td width=50><p align=center>{{ post.id }}</p></td>
+                    <td width=100><p align=center>{{ post.name }}</p></td>
+                    <td width=100><p align=center>{{ post.area }}</p></td>
                     <td width=320>
                         <p align=center>
-                            <a href="/viewWork?memo_id={{ boardRow.id }}&current_page={{ current_page }}&searchStr=None" title="{{ boardRow.memo}}">{{ boardRow.subject }}
+                            <a href="/page?memo_id={{ post.id }}&current_page={{ current_page }}&searchStr=None" title="{{ post.title}}">{{ post.title }}
                         </p>
                     </td>
-                    <td width=100><p align=center>{{ boardRow.created_date }}</p></td>
-                    <td width=100><p align=center>{{ boardRow.hits }}</p></td>
+                    <td width=100><p align=center>{{ post.term }}</p></td>
+                    <td width=100><p align=center> {{ post.volunteer_type }}</p></td>
+                    <td width=100><p align=center> 0 / {{ post.how_many }}</p></td>
+                    <td width=100><p align=center>{{ post.hits }}</p></td>
                     </tr>
                     {% endfor %}
                 </ul>
@@ -89,8 +90,8 @@
         <table cellspacing=1 width=700 border=1 >
             <tr>
                 <td>
-                {% for page in totalPageList %}
-                <a href="/listSpecificPageWork?current_page={{page}}" >
+                {% for page in total_page_lst %}
+                <a href="/post?current_page={{page}}" >
                 [
                 {% ifequal page current_page %}
                     <b>
