@@ -201,6 +201,20 @@ header .menu_img{
     height: 800px;
     margin-top: 50px;
     margin-top: 50px;
+    border: solid 1px;
+    border-color: #707070;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main_box2{
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+    border: solid 1px;
+    border-color: #707070;
+    margin-top: 50px;
 }
 
 .main_text1{
@@ -211,7 +225,7 @@ header .menu_img{
 }
 
 .main_text2{
-    white-space:nowrap
+    white-space:nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +241,7 @@ header .menu_img{
 }
 
 .main_text3{
-    white-space:nowrap
+    white-space:nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,6 +277,7 @@ header .menu_img{
     opacity: 0.88;
     background-color: #ebebff;
 }
+<<<<<<< Updated upstream
 
 .company_name{
     display: flex;
@@ -278,6 +293,79 @@ header .menu_img{
     text-align: center;
     color: #313165;
 }
+
+
+/* 메인페이지 지나간 */
+
+
+
+/* 영웅들 페이지 */
+.pink_box{
+    width: 100%;
+    height: 200px;
+    background-color: #ffdfd3;
+    margin-top: 50px;
+}
+.pink_box div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pink_box_bot_3box{
+    
+}
+.pink_box_top_h2{
+    font-weight: lighter;
+    font-size: 25px;
+
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 3px;
+    display: inline-block;
+    border: solid 1px #f0f0f0;
+    background-color: #f0f0f0;
+}
+
+.pink_box_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-weight: large 700;
+    font-size: 30px;
+    color: white;
+}
+.pink_box_text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p_text{
+    color: black;
+}
+
+.hero_box_text1_p1{
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+    color: black;
+}
+.hero_box_text1_p2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+}
+
+.hero_box_human img{
+
+    resize: both; /* 이미지 최대 사이즈에 적용 */
+    float: center; /* 가운데 정렬 */
+    max-width: 250px; /* 넓이를 지정 */
+    height: auto; /* 높이를 지정 */
+    margin: 30px; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
 
 .company_text{
     white-space:nowrap
@@ -336,4 +424,54 @@ header .menu_img{
     width: 950px;
     height: 600px;
     margin-left: 300px;
+
+=======
+
+.company_name{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: NanumSquareB;
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: center;
+    color: #313165;
+}
+
+.company_text{
+    white-space:nowrap
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.company_click{
+    padding-top: 70px;
+    white-space:nowrap
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;  
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+>>>>>>> Stashed changes
 }
