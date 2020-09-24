@@ -187,7 +187,6 @@ header .menu_img{
     width: 100%;
     height: 600px;
     margin-top: 20px;
-    border: solid 1px #707070;
 }
 
 /* 메인페이지 모집중인 */
@@ -195,16 +194,12 @@ header .menu_img{
     width: 100%;
     height: 800px;
     margin-top: 50px;
-    border: solid 1px;
-    border-color: #707070;
 }
 
 .main_box2{
     width: 100%;
     height: 800px;
     margin-top: 50px;
-    border: solid 1px;
-    border-color: #707070;
     margin-top: 50px;
 }
 
@@ -315,4 +310,30 @@ header .menu_img{
     letter-spacing: normal;
     text-align: center;
     color: #000000;
+}
+
+.company_ment{
+    width: 100%;
+    height: 300px;
+    opacity: 0.88;
+}
+
+.company_ment_text{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-family: NanumSquareB;
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.partner_list{
+    width: 950px;
+    height: 600px;
+    margin-left: 300px;
 }
