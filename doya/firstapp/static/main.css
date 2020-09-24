@@ -385,7 +385,7 @@ header .menu_img{
 
 .company_click{
     padding-top: 70px;
-    white-space:nowrap
+    white-space:nowrap;
     display: flex;
     justify-content: center;
     align-items: center;

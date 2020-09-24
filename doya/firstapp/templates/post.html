@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel ="stylesheet" href="{% static 'post.css' %}">
     <style type="text/css"> 
         .menubar a { text-decoration:none ; color:white }
@@ -26,8 +28,10 @@
                     <img class="login_img" src="{% static 'img/login.PNG'%}">
                     <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
                 </div>
+
                 <div><img class="search_img" src="{% static 'img/search.PNG'%}"></div>
                 <div><img class="menu_img" src="{% static 'img/menu.PNG'%}"></div>
+
             </div>
         </div>
     </header>
@@ -54,7 +58,7 @@
         <table cellspacing=1 width=700 border=1>
             <tr>
                 <td width=50><p align=center>번호</p></td>
-                <td width=100><p align=center>기관명</p></td>
+                <td width=100><p align=center>주관명</p></td>
                 <td width=100><p align=center>지역</p></td>
                 <td width=320><p align=center>제목</p></td>
                 <td width=100><p align=center>활동기간</p></td>

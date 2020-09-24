@@ -1,0 +1,418 @@
+/* 팝업창 */
+body {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+header .head_1 {
+    width: 100%;
+    height: 80px;
+    border: solid 1px #707070;
+    background-color: #1841ac;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .title{
+    position: absolute;
+    left: 70px;
+    width: 200px;
+    height: 80px;
+}
+
+header .head_1_text1{
+    font-family: NanumSquareRoundB;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+header .head_1_text2{
+    font-family: NanumSquareRoundB;
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* 로그인 네비바 */
+header .head_2{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 80px;
+    border: solid 1px #707070;
+    background-color: #000000;
+}
+
+header .name{
+    position: absolute;
+    left: 70px;
+    font-family: NanumSquareRoundB;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+header .login_img{
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+header .login{
+    width: 70px;
+    height: 27px;
+    margin-right: 20px;
+    font-family: NanumSquareRoundL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+header .join {
+    width: 46px;
+    height: 27px;
+    font-family: NanumSquareRoundL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    margin-right: 80px;
+  }
+
+header .search_bar{
+    display: flex;
+    position: absolute;
+    right: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+}
+
+header .search_img{
+    width: 30px;
+    height: 30px;
+    margin-right: 40px;
+}
+
+header .menu_img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* 메뉴 네비바 */
+.menubar {
+    width: 100%;
+    height: 50px;
+    border: solid 1px #707070;
+    background-color: black;
+    margin-top: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menubar ul li{
+    color: white;
+    font-family: NanumSquareRoundL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    display: inline;
+    margin: 70px;
+}
+
+.menubar .right_box{
+    position: absolute;
+    right: 70px;
+    display: flex;
+    width: 130px;
+    height: 40px;
+    opacity: 0.51;
+    border-radius: 14px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.menubar .right_m{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    font-family: NanumSquareRoundB;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    z-index: 3;
+}
+
+/* 메인페이지 사진 */
+.main_img{
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+}
+
+/* 메인페이지 모집중인 */
+.main_box1{
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+}
+
+.main_box2{
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+    margin-top: 50px;
+    border: solid 1px;
+    border-color: #707070;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main_text1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.main_text2{
+    white-space:nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.main_text3{
+    white-space:nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.main_box1_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    display: flex;
+    margin-left: 60px;
+    margin-top: 50px;
+    width: 300px;
+    height: 250px;
+}
+
+/* 회사 정보 */
+.company_info{
+    width: 100%;
+    height: 430px;
+    opacity: 0.88;
+    background-color: #ebebff;
+}
+
+.company_name{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: NanumSquareB;
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: center;
+    color: #313165;
+}
+
+
+/* 메인페이지 지나간 */
+
+
+
+/* 영웅들 페이지 */
+.pink_box{
+    width: 100%;
+    height: 200px;
+    background-color: #ffdfd3;
+    margin-top: 50px;
+}
+.pink_box div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pink_box_bot_3box{
+    
+}
+.pink_box_top_h2{
+    font-weight: lighter;
+    font-size: 25px;
+
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 3px;
+    display: inline-block;
+    border: solid 1px #f0f0f0;
+    background-color: #f0f0f0;
+}
+
+.pink_box_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-weight: large 700;
+    font-size: 30px;
+    color: white;
+}
+.pink_box_text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p_text{
+    color: black;
+}
+
+.hero_box_text1_p1{
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+    color: black;
+}
+.hero_box_text1_p2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+}
+
+.hero_box_human img{
+
+    resize: both; /* 이미지 최대 사이즈에 적용 */
+    float: center; /* 가운데 정렬 */
+    max-width: 250px; /* 넓이를 지정 */
+    height: auto; /* 높이를 지정 */
+    margin: 30px; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
+
+.company_text{
+    white-space:nowrap
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.company_click{
+    padding-top: 70px;
+    white-space:nowrap
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;  
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.company_ment{
+    width: 100%;
+    height: 300px;
+    opacity: 0.88;
+}
+
+.company_ment_text{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-family: NanumSquareB;
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.partner_list{
+    width: 950px;
+    height: 600px;
+    margin-left: 300px;
+
+}
