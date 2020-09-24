@@ -47,15 +47,29 @@ header .head_2{
     align-items: center;
     margin-top: 10px;
     width: 100%;
-    height: 100px;
+    height: 80px;
     border: solid 1px #707070;
     background-color: #000000;
+}
+
+header .name{
+    position: absolute;
+    left: 70px;
+    font-family: NanumSquareRoundB;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
 }
 
 header .login{
     width: 70px;
     height: 27px;
-    margin-right: 8px;
+    margin-right: 20px;
     font-family: NanumSquareRoundL;
     font-size: 20px;
     font-weight: normal;
@@ -68,7 +82,7 @@ header .login{
 }
 
 header .login_img{
-    margin-right: 3px;
+    margin-right: 5px;
     width: 20px;
     height: 20px;
 }
@@ -82,22 +96,30 @@ header .login_img{
     margin-top: 3px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-.menubar ul{
-    position: relative;
-    /* margin: 0px;
-    padding: 0px; */
-}
+
 .menubar ul li{
     color: white;
     display: inline;
     margin: 30px;
 }
-.menubar div{
-    
+
+.menubar .right_m{
+    position: absolute;
+    right: 70px;
+    font-family: NanumSquareRoundB;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
 }
+
 
 header .join {
     width: 46px;
@@ -111,9 +133,27 @@ header .join {
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+    margin-right: 80px;
   }
 
-  header .head_2_text{
-      
-  }
+header .search_bar{
+    display: flex;
+    position: absolute;
+    right: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+}
 
+header .search_img{
+    width: 30px;
+    height: 30px;
+    margin-right: 40px;
+}
+
+header .menu_img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}

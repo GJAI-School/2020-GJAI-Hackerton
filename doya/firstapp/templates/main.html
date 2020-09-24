@@ -18,23 +18,32 @@
         </div>
 
         <div class="head_2">
-            <div class="head_2_text">
-                <img class="login_img" src="static/img/login.jpg">
-                <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
+            <div class="name">DOYA</div>
+            <div class="search_bar">
+                <div class="head_2_text">
+                    <img class="login_img" src="static/img/login.PNG">
+                    <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
+                </div>
+                <div><img class="search_img" src="static/img/search.PNG"></div>
+                <div><img class="menu_img" src="static/img/menu.PNG"></div>
             </div>
         </div>
     </header>
   
     <nav class="menubar">
+        
         <ul>
             <li><a href='{% url 'post' %}'>모집중</a></li>
             <li><a>봉사후기</a></li>
             <li><a>봉사후기</a></li>
         </ul>
-      
-        <div>
-            <p>+제안하기</p>
+
+        <div class="right_m">
+            +제안하기
+
         </div>
+    
+
     </nav>
     <contain>
         <section>
