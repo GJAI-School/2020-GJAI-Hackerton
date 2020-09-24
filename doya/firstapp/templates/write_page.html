@@ -56,30 +56,22 @@
                     <input name='title'/>
                 </div>
                 <div>
-                    <label for='create_date'>시간</label>
-                    <input name='create_date'/>
-                </div>
-                <div>
                     <label for='area'>지역</label>
                     <select name='area' size=1>
-                    {% for key, value in area_lst.items %}
-                        <option value={{ key }}>{{ value }}</option>
+                    {% for area in area_lst %}
+                        <option value={{ area }}>{{ area }}</option>
                     {% endfor %}
                     </select>
                 </div>
                 <div>
-                    <label for='start_date'>시작시간</label>
-                    <input name='start_date'/>
-                </div>
-                <div>
-                    <label for='end_date'>마감시간</label>
-                    <input name='end_date'/>
+                    <label for='term'>기간</label>
+                    <input name='term'/>
                 </div>
                 <div>
                     <label for='volunteer_type'>타입</label>
                     <select name='volunteer_type' size=1>
-                    {% for key, value in volunteer_type.items %}
-                        <option value={{ key }}>{{ value }}</option>
+                    {% for voluteer_type in voluteer_type_lst%}
+                        <option value={{ voluteer_type }}>{{ voluteer_type }}</option>
                     {% endfor %}
                     </select>
                 </div>
@@ -109,12 +101,11 @@
                 </div>
                 <div>
                     <label for='affiliation'>소속</label>
-                        <div name='affiliation'>
-                            <label for='affiliation_1'>봉사활동자</label>
-                            <input id='affiliation_1' type="radio" name='affiliation' checked/>
-                            <label for='affiliation_2'>기관</label>
-                            <input id='affiliation_2' type="radio" name='affiliation' checked/>
-                        </div>
+                    <select name='affiliation' size=1>
+                    {% for affiliation in affiliation_lst %}
+                        <option value={{ affiliation }}>{{ affiliation }}</option>
+                    {% endfor %}
+                    </select>
                 </div>
                 <button type='submit'>등록하기</button>
             </form>
