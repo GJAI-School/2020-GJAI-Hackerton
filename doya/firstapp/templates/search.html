@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href='{% static "search.css" %}'>
+    <title>Document</title>
+</head>
+<body>
+<header>
+        <div class="head_1">
+            <img class="title" src="static/img/header.jpg">
+            <div class="head_1_text1">위기경보 심각</div> 
+            <div class='head_1_text2'>코로나바이러스감염증-19</div> 
+        </div>
+        <div class="head_2">
+            <div class="name">DOYA</div>
+            <div class="search_bar">
+                <div class="head_2_text">
+                    <img class="login_img" src="static/img/login.PNG">
+                    <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
+                </div>
+                <div><a href='{% url 'search' %}'><img class="search_img" src="static/img/search.PNG"></a></div>
+                <div><img class="menu_img" src="static/img/menu.PNG"></div>
+            </div>
+        </div>
+    </header>
+
+    <contain>
+        <div>
+            <h1>혹시 비대면 자원봉사가 처음인가요?</h1>
+        </div>
+        <div class='sub_title'>
+            <h2>지금 가장 많이 찾아요!</h2>
+        </div>
+        <div class='search_num1'>
+            <p>#천연비누만들기</p>
+        </div>
+        <div class='search_num2'>
+            <p>#재능기부</p>
+        </div>
+        <div class='search_num3'>
+            <p>#배달봉사</p>
+        </div>
+        <div class='search_num4'>
+            <p>#선물하기봉사</p>
+        </div>
+        <div class='search_num5'>
+            <p>#응원메세지</p>
+        </div>
+    </contain>
+</body>
+</html>
