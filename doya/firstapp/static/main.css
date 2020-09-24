@@ -250,10 +250,10 @@ header .menu_img{
     display: flex;
     margin-left: 60px;
     margin-top: 50px;
-    width: 200px;
-    height: 150px;
-    border-radius: 10px;
-    background-color: palevioletred;
+    width: 250px;
+    height: 180px;
+    margin-top: 20px;
+    border: solid 1px #707070;
 }
 
 
