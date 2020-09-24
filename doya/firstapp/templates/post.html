@@ -8,7 +8,9 @@
 
     <link rel ="stylesheet" href="{% static 'post.css' %}">
     <style type="text/css"> 
-        a { text-decoration:none ; color:black}
+        .menubar a { text-decoration:none ; color:white }
+        .head_2 a { text-decoration:none ; color:white }
+        .lists a { text-decoration:none ; color:black }
     </style>
     <title>Document</title>
 </head>
@@ -17,7 +19,7 @@
         <div class="head_1">
             <img class="title" src="{% static 'img/header.jpg'%}">
             <div class="head_1_text1">위기경보 심각</div> 
-            <div class='head_1_text2'>코로나바이러스감염증-19</div> 
+            <div class='head_1_text2'>코로나바이러스감염증-19</div>
         </div>
         <div class="head_2">
             <div><a class="name" href='{% url 'main' %}'>DOYA</a></div>
@@ -45,7 +47,7 @@
         </div>
     </nav>
 
-    <contain>
+    <contain class="lists">
         <table cellspacing=1 width=700 border=0>
             <tr>
                 <td>총 모집 건수: {{ total_cnt }}</td>
