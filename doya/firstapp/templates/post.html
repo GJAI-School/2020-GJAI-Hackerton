@@ -48,78 +48,80 @@
     </nav>
 
     <contain class="lists">
-        <table cellspacing=1 width=700 border=0>
-            <tr>
-                <td>총 모집 건수: {{ total_cnt }}</td>
-                <td><p align=right> 페이지:{{ current_page }}</td>
-            </tr>
-        </table>
+        <div>
+            <table cellspacing=1 width=700 border=0>
+                <tr>
+                    <td>총 모집 건수: {{ total_cnt }}</td>
+                    <td><p align=right> 페이지:{{ current_page }}</td>
+                </tr>
+            </table>
 
-        <table cellspacing=1 width=700 border=1>
-            <tr>
-                <td width=50><p align=center>번호</p></td>
-                <td width=100><p align=center>주관명</p></td>
-                <td width=100><p align=center>지역</p></td>
-                <td width=320><p align=center>제목</p></td>
-                <td width=100><p align=center>활동기간</p></td>
-                <td width=100><p align=center>봉사유형</p></td>
-                <td width=100><p align=center>모집인원</p></td>
-                <td width=100><p align=center>조회수</p></td>
-            </tr>
+            <table cellspacing=1 width=700 border=1>
+                <tr>
+                    <td width=50><p align=center>번호</p></td>
+                    <td width=100><p align=center>주관명</p></td>
+                    <td width=100><p align=center>지역</p></td>
+                    <td width=320><p align=center>제목</p></td>
+                    <td width=100><p align=center>활동기간</p></td>
+                    <td width=100><p align=center>봉사유형</p></td>
+                    <td width=100><p align=center>모집인원</p></td>
+                    <td width=100><p align=center>조회수</p></td>
+                </tr>
 
-            {% if post_lst %}
-                <ul>
-                    {% for post in post_lst %}
-                    <tr>
-                    <td width=50><p align=center>{{ post.pk }}</p></td>
-                    <td width=100><p align=center>{{ post.affiliation }}</p></td>
-                    <td width=100><p align=center>{{ post.area }}</p></td>
-                    <td width=320>
-                        <p align=center>
-                            <a href="/post/page/{{ post.pk }}" title="{{ post.title }}">{{ post.title }}
-                        </p>
-                    </td>
-                    <td width=100><p align=center>{{ post.term }}</p></td>
-                    <td width=100><p align=center> {{ post.volunteer_type }}</p></td>
-                    <td width=100><p align=center> 0 / {{ post.how_many }}</p></td>
-                    <td width=100><p align=center>{{ post.hits }}</p></td>
-                    </tr>
+                {% if post_lst %}
+                    <ul>
+                        {% for post in post_lst %}
+                        <tr>
+                        <td width=50><p align=center>{{ post.pk }}</p></td>
+                        <td width=100><p align=center>{{ post.affiliation }}</p></td>
+                        <td width=100><p align=center>{{ post.area }}</p></td>
+                        <td width=320>
+                            <p align=center>
+                                <a href="/post/page/{{ post.pk }}" title="{{ post.title }}">{{ post.title }}
+                            </p>
+                        </td>
+                        <td width=100><p align=center>{{ post.term }}</p></td>
+                        <td width=100><p align=center> {{ post.volunteer_type }}</p></td>
+                        <td width=100><p align=center> 0 / {{ post.how_many }}</p></td>
+                        <td width=100><p align=center>{{ post.hits }}</p></td>
+                        </tr>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No Data.</p>
+                {% endif %} 
+            </table>
+
+            <table cellspacing=1 width=700 border=1 >
+                <tr>
+                    <td>
+                    {% for page in total_page_lst %}
+                    <a href="/post" >
+                    [
+                    {% ifequal page current_page %}
+                        <b>
+                    {% endifequal %}
+                    {{page}}
+
+                    {% ifequal page current_page  %}
+                        </b>
+                    {% endifequal %}
+                    ]
                     {% endfor %}
-                </ul>
-            {% else %}
-                <p>No Data.</p>
-            {% endif %} 
-        </table>
+                    </td>
+                </tr>
+            </table>
 
-        <table cellspacing=1 width=700 border=1 >
-            <tr>
-                <td>
-                {% for page in total_page_lst %}
-                <a href="/post" >
-                [
-                {% ifequal page current_page %}
-                    <b>
-                {% endifequal %}
-                {{page}}
-
-                {% ifequal page current_page  %}
-                    </b>
-                {% endifequal %}
-                ]
-            {% endfor %}
-            </td>
-        </tr>
-    </table>
-
-    <table width=700>
-        <tr>
-            <td><input type=button value="글쓰기"  OnClick="window.location='{% url 'write_page' %}'"></td>
-            <td><form name=searchf method=post action="/searchWithSubject/">
-                <p align=right><input type=text name=searchStr size=50  maxlength=50>
-                <input type=submit value="글찾기"></p>
-            </td>
-        </tr>
-    </table>
+            <table width=700>
+                <tr>
+                    <td><input type=button value="글쓰기"  OnClick="window.location='{% url 'write_page' %}'"></td>
+                    <td><form name=searchf method=post action="/searchWithSubject/">
+                        <p align=right><input type=text name=searchStr size=50  maxlength=50>
+                        <input type=submit value="글찾기"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </contain>
 </body>
 </html>

@@ -181,3 +181,10 @@ header .menu_img{
     text-align: center;
     z-index: 3;
 }
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
