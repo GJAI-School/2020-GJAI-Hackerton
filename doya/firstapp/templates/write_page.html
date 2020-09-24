@@ -7,16 +7,121 @@
 </head>
 <body>
     <header>
-        <div>
-            <p>위기경보 심각 <br/> 코로나바이러스감염증-19</p>
+        <div class="head_1">
+            <div class="head_1_text1">
+                위기경보 심각
+            </div> 
+            <div class='head_1_text2'>
+                코로나바이러스감염증-19
+            </div> 
         </div>
-        <div>
-            <a href='{% url 'login' %}'>로그인</a> <a href='{% url 'signin' %}'>회원가입</a>
+
+        <div class="head_2">
+            <div class="name">DOYA</div>
+            <div class="search_bar">
+                <div class="head_2_text">
+                    <img class="login_img" src="static/img/login.PNG">
+                    <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
+                </div>
+                <div><img class="search_img" src="static/img/search.PNG"></div>
+                <div><img class="menu_img" src="static/img/menu.PNG"></div>
+            </div>
         </div>
-        <div>
     </header>
+  
+    <nav class="menubar">
+        
+        <ul>
+            <li><a href='{% url 'post' %}'>모집중</a></li>
+            <li><a>봉사후기</a></li>
+            <li><a>봉사후기</a></li>
+        </ul>
 
+        <div class="right_m">
+            +제안하기
 
+        </div>
+    
 
+    </nav>
+
+    <contain>
+        <div>
+            <h1>write_page</h1>
+        </div>
+        <div>
+            <form action='{% url 'write_page' %}' method='POST'> {% csrf_token %}
+                <div>
+                    <label for='title'>제목</label>
+                    <input name='title'/>
+                </div>
+                <div>
+                    <label for='create_date'>시간</label>
+                    <input name='create_date'/>
+                </div>
+                <div>
+                    <label for='area'>지역</label>
+                    <select name='area' size=1>
+                    {% for key, value in area_lst.items %}
+                        <option value={{ key }}>{{ value }}</option>
+                    {% endfor %}
+                    </select>
+                </div>
+                <div>
+                    <label for='start_date'>시작시간</label>
+                    <input name='start_date'/>
+                </div>
+                <div>
+                    <label for='end_date'>마감시간</label>
+                    <input name='end_date'/>
+                </div>
+                <div>
+                    <label for='volunteer_type'>타입</label>
+                    <select name='volunteer_type' size=1>
+                    {% for key, value in volunteer_type.items %}
+                        <option value={{ key }}>{{ value }}</option>
+                    {% endfor %}
+                    </select>
+                </div>
+                <div>
+                    <label for='how_many'>인원</label>
+                    <input name='how_many'/>
+                </div>
+                <div>
+                    <label for='photo'>사진첨부</label>
+                    <input name='photo'/>
+                </div>
+                <div>
+                    <label for='memo'>내용</label>
+                    <textarea id='memo' name='memo'></textarea>
+                </div>
+                 <div>
+                    <label for='name'>이름</label>
+                    <input name='name'/>
+                </div>
+                 <div>
+                    <label for='email'>이메일</label>
+                    <input name='email'/>
+                </div>
+                 <div>
+                    <label for='phone_num'>휴대폰 전화번호</label>
+                    <input name='phone_num'/>
+                </div>
+                <div>
+                    <label for='affiliation'>소속</label>
+                        <div name='affiliation'>
+                            <label for='affiliation_1'>봉사활동자</label>
+                            <input id='affiliation_1' type="radio" name='affiliation' checked/>
+                            <label for='affiliation_2'>기관</label>
+                            <input id='affiliation_2' type="radio" name='affiliation' checked/>
+                        </div>
+                </div>
+                <button type='submit'>등록하기</button>
+            </form>
+        </div>
+        <div>
+            <a href='{% url 'post' %}'>뒤로가기</a>
+        </div>
+    </contrain>
 </body>
 </html>
