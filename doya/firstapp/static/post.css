@@ -16,6 +16,13 @@ header .head_1 {
     align-items: center;
 }
 
+header .title{
+    position: absolute;
+    left: 70px;
+    width: 200px;
+    height: 80px;
+}
+
 header .head_1_text1{
     font-family: NanumSquareRoundB;
     font-size: 20px;
@@ -138,20 +145,39 @@ header .menu_img{
 
 .menubar ul li{
     color: white;
+    font-family: NanumSquareRoundL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
     display: inline;
-    margin: 30px;
+    margin: 70px;
+}
+
+.menubar .right_box{
+    position: absolute;
+    right: 70px;
+    display: flex;
+    width: 130px;
+    height: 40px;
+    opacity: 0.51;
+    border-radius: 14px;
+    background-color: #ffffff;
+    z-index: 1;
 }
 
 .menubar .right_m{
-    position: absolute;
-    right: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
     font-family: NanumSquareRoundB;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.14;
     letter-spacing: normal;
     text-align: center;
-    color: #ffffff;
+    z-index: 3;
 }

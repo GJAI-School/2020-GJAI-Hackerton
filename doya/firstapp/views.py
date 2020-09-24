@@ -14,7 +14,8 @@ def signin(request):
 def logout(request):
     return redirect('main.html')
 
-
+def search(request):
+    return render(request, 'search.html')
 
 row_per_page = 10
 
@@ -26,11 +27,14 @@ def post(request):
     helper = page_helper()
     total_page_lst = helper.getTotalPage_lst(total_cnt, row_per_page)
 
-    return render(request, 'post.html',
-                            {'post_lst' : post_lst,
-                            'total_cnt' : total_cnt,
-                            'current_page' : current_page,
-                            'total_page_lst' : total_page_lst})
+    context = {
+        'post_lst' : post_lst,
+        'total_cnt' : total_cnt,
+        'current_page' : current_page,
+        'total_page_lst' : total_page_lst
+    }
+
+    return render(request, 'post.html', context)
 
 
 class page_helper:
@@ -55,8 +59,14 @@ class page_helper:
 
 
 
-def page(request):
-    return render(request, 'page.html')
+def page(request, post_pk):
+    post_object = write_post.objects.get(pk=post_pk)
+
+    context = {
+        'post_object' : post_object
+    }
+
+    return render(request, 'page.html', context)
 
 
 area_lst = ['서울특별시', '인천광역시', '경기도', '강원도',
@@ -67,15 +77,11 @@ area_lst = ['서울특별시', '인천광역시', '경기도', '강원도',
 voluteer_type_lst = ['자연환경보호활동', '지역사회봉사활동', '기술지원', '업무보조', 
                     '정서지원', '기타봉사', '생활지원', '전문봉사']
 
-affiliation_lst = ['자원봉사자', '기관']
-
-
 def write_page(request):
 
     context = {
         'area_lst' : area_lst,
         'voluteer_type_lst' : voluteer_type_lst,
-        'affiliation_lst' : affiliation_lst
     }
 
 
@@ -86,8 +92,9 @@ def write_page(request):
             term = request.POST['term'],
             volunteer_type = request.POST['volunteer_type'],
             how_many = request.POST['how_many'],
-            photo = request.POST['photo'],
-            memo = request.POST['memo'],
+            memo1 = request.POST['memo1'],
+            memo2 = request.POST['memo2'],
+            memo3 = request.POST['memo3'],
             name = request.POST['name'],
             email = request.POST['email'],
             phone_num = request.POST['phone_num'],
@@ -97,17 +104,3 @@ def write_page(request):
         return redirect('post')
 
     return render(request, 'write_page.html', context)
-
-
-# def add(request, student_pk):
-#     student_object = AiStudents.objects.get(pk=student_pk)
-
-#     if request.method == 'POST':
-#         StudentPost.objects.create(
-#             intro_text = request.POST['intro_text'],
-#             writer = student_object
-#         )
-
-#         return redirect('detail', student_pk)
-
-#     return render(request, 'add.html')
