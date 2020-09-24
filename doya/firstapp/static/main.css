@@ -208,6 +208,15 @@ header .menu_img{
 
 }
 
+.main_box2{
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+    border: solid 1px;
+    border-color: #707070;
+    margin-top: 50px;
+}
+
 .main_text1{
     display: flex;
     justify-content: center;
@@ -268,6 +277,7 @@ header .menu_img{
     opacity: 0.88;
     background-color: #ebebff;
 }
+<<<<<<< Updated upstream
 
 .company_name{
     display: flex;
@@ -415,4 +425,53 @@ header .menu_img{
     height: 600px;
     margin-left: 300px;
 
+=======
+
+.company_name{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: NanumSquareB;
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: center;
+    color: #313165;
+}
+
+.company_text{
+    white-space:nowrap
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.company_click{
+    padding-top: 70px;
+    white-space:nowrap
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;  
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+>>>>>>> Stashed changes
 }
