@@ -21,8 +21,9 @@ from firstapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name='main'),
-    path('signin', views.signin, name='signin'),
-    path('login', views.login, name='login'),
+    path('search/', views.search, name='search'),
+    path('signin/', views.signin, name='signin'),
+    path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('post/', views.post, name='post'),
     path('post/page/<int:post_pk>', views.page, name='page'), 
