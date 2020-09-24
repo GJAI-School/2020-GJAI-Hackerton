@@ -9,14 +9,9 @@
 <body>
     <header>
         <div class="head_1">
-            <div class="head_1_text1">
-                위기경보 심각
-            </div> 
-            <div class='head_1_text2'>
-                코로나바이러스감염증-19
-            </div> 
+            <div class="head_1_text1">위기경보 심각</div> 
+            <div class='head_1_text2'>코로나바이러스감염증-19</div> 
         </div>
-
         <div class="head_2">
             <div class="name">DOYA</div>
             <div class="search_bar">
@@ -31,49 +26,41 @@
     </header>
   
     <nav class="menubar">
-        
         <ul>
             <li><a href='{% url 'post' %}'>모집중</a></li>
             <li><a>봉사후기</a></li>
             <li><a>봉사후기</a></li>
         </ul>
-
-        <div class="right_m">
-            +제안하기
-
+        <div class="right_box">
+            <div class="right_m">+ 제안하기</div>   
         </div>
-    
-
     </nav>
+
     <contain>
         <section>
             <article>
-                <div>
-                    <p>그림</p>
-                </div>
+                <div><div><img class="main_img" src="static/img/main01.jpg"></div></div>
             </article>
         </section>
 
         <section>
             <header>
-                <div>
-                    <h2>모집중인</h2>
-                </div>
-                <div>
-                    <p>모든 것은 바뀔 수 있다. 그리고,<br/>
-                        나 역시 무언가 바꿀 수 있다.</p>
+                <div class="main_box1">
+                    <h2 class="main_text1">모집중인</h2>
+                    <div class="main_text2"><p>모든 것은 바뀔 수 있다. 그리고,</p></div>
+                    <div class="main_text3"><p>나 역시도 무엇인가를 바꿀 수 있다.</p></div>
+                    <div class="main_box1_container">
+                        <img class="child" src="static/img/m01.jpg">
+                        <img class="child" src="static/img/m02.jpg">
+                        <img class="child" src="static/img/m03.jpg">
+                    </div>
+                    <div class="main_box1_container">
+                        <img class="child" src="static/img/m04.jpg">
+                        <img class="child" src="static/img/m05.jpg">
+                        <img class="child" src="static/img/m06.jpg">
+                    </div>  
                 </div>
             </header>
-            <article>
-                <ui>
-                    <li><img>이미지</li>
-                    <li><img>이미지</li>
-                    <li><img>이미지</li>
-                    <li><img>이미지</li>
-                    <li><img>이미지</li>
-                    <li><img>이미지</li>
-                </ui>
-            </article>
         </section>
 
         <section>
