@@ -190,13 +190,18 @@ header .menu_img{
     margin-top: 50px;
     border: solid 1px;
     border-color: #707070;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .main_text1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     background-color: white;
+    display:inline-block;
+    padding: 5px;
+    border: solid 1px;
+    border-color:white;
 }
 
 .main_text2{
