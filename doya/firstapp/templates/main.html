@@ -9,7 +9,7 @@
 
     <header>
         <div>
-            <p>위기경보 심각 <br/> 코로나바이러스감염증-19</p>
+            <a href='{% url 'main' %}'>위기경보 심각 <br/> 코로나바이러스감염증-19</a>
         </div>
         <div>
             <a href='{% url 'login' %}'>로그인</a> <a href='{% url 'signin' %}'>회원가입</a>
@@ -20,7 +20,7 @@
     <nav>
         <div>
             <ul>
-                <li><a>모집중</a></li>
+                <li><a href='{% url 'post' %}'>모집중</a></li>
                 <li><a>봉사후기</a></li>
                 <li><a>봉사후기</a></li>
             </ul>

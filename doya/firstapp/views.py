@@ -12,3 +12,9 @@ def signin(request):
 
 def logout(request):
     return redirect('main.html')
+
+def post(request):
+    return render(request, 'post.html')
+
+def write_page(request):
+    return render(request, 'write_page.html')
