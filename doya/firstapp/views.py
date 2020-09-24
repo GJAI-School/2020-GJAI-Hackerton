@@ -14,7 +14,8 @@ def signin(request):
 def logout(request):
     return redirect('main.html')
 
-
+def search(request):
+    return render(request, 'search.html')
 
 row_per_page = 10
 

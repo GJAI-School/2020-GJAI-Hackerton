@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="{% static 'main.css' %}">
     <style type="text/css"> 
-        a { text-decoration:none ; color:white}
+        a { text-decoration:none ; color:white }
     </style>
     <title>Document</title>
 </head>
@@ -15,7 +15,8 @@
         <div class="head_1">
             <img class="title" src="static/img/header.jpg">
             <div class="head_1_text1">위기경보 심각</div> 
-            <div class='head_1_text2'>코로나바이러스감염증-19</div> 
+            <div class='head_1_text2'>코로나바이러스감염증-19</div>
+            <img class="title_right" src="static/img/X.png">
         </div>
         <div class="head_2">
             <div class="name">DOYA</div>
@@ -24,7 +25,7 @@
                     <img class="login_img" src="static/img/login.PNG">
                     <a class="login" href='{% url 'login' %}'>Log in</a> <a class="join" href='{% url 'signin' %}'>Join</a>
                 </div>
-                <div><img class="search_img" src="static/img/search.PNG"></div>
+                <div><a href='{% url 'search' %}'><img class="search_img" src="static/img/search.PNG"></a></div>
                 <div><img class="menu_img" src="static/img/menu.PNG"></div>
             </div>
         </div>
@@ -96,28 +97,19 @@
                 <div class="pink_box_bot">
                     <div class="pink_box_bot_3box">
                         <div class="pink_box_text">
-                            <div>
-                            <img class="pink" src="static/img/watch.png">
-                            608
-                            </div>
+                            <div><img class="pink" src="static/img/watch.png">608</div>
                             <div class="p_text">Week</div>
                         </div>
                     </div>
                     <div class="pink_box_bot_3box">
                         <div class="pink_box_text">
-                            <div>
-                            <img class="pink" src="static/img/team.png">
-                            35
-                            </div>
+                            <div><img class="pink" src="static/img/team.png">35</div>
                             <div class="p_text">Team</div>
                         </div>
                     </div>
                     <div class="pink_box_bot_3box">
                         <div class="pink_box_text">
-                            <div>
-                            <img class="pink" src="static/img/superhuman.png">
-                            154
-                            </div>
+                            <div><img class="pink" src="static/img/superhuman.png">154</div>
                             <div class="p_text">SuperHuman</div>
                         </div>
                     </div>
@@ -127,16 +119,33 @@
             <div class="hero_box">
                 <div class="hero_box_text">
                     <div class="hero_box_text1">
-                        <p class="hero_box_text1_p1">덕 분 에</p>
+                        <p class="hero_box_text1_p1">덕분에</p>
                         <p class="hero_box_text1_p2">영웅들</p>
                     </div>
                     <div class="hero_box_human">
-                        <img class="S_human" src="static/img/h01.jpg">
-                        <img class="S_human" src="static/img/h02.jpg">
-                        <img class="S_human" src="static/img/h03.jpg">
-                        <img class="S_human" src="static/img/h04.jpg">
+                        <img class="hero_box_list" src="static/img/h01.jpg">
+                        <img class="hero_box_list" src="static/img/h02.jpg">
+                        <img class="hero_box_list" src="static/img/h03.jpg">
+                        <img class="hero_box_list" src="static/img/h04.jpg">
                     </div>
-
+                    <div class="hero_box_human">
+                        <img class="hero_box_list" src="static/img/h05.jpg">
+                        <img class="hero_box_list" src="static/img/h06.jpg">
+                        <img class="hero_box_list" src="static/img/h07.jpg">
+                        <img class="hero_box_list" src="static/img/h08.jpg">
+                    </div>
+                    <div class="hero_box_human">
+                        <img class="hero_box_list" src="static/img/h09.jpg">
+                        <img class="hero_box_list" src="static/img/h10.jpg">
+                        <img class="hero_box_list" src="static/img/h11.jpg">
+                        <img class="hero_box_list" src="static/img/h12.jpg">
+                    </div>
+                    <div class="hero_box_human">
+                        <img class="hero_box_list" src="static/img/h13.jpg">
+                        <img class="hero_box_list" src="static/img/h14.jpg">
+                        <img class="hero_box_list" src="static/img/h15.jpg">
+                        <img class="hero_box_list" src="static/img/h16.jpg">
+                    </div>
                 </div>
             </div>
         </section>
