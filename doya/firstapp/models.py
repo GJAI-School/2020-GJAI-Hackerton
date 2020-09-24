@@ -18,8 +18,6 @@ area_lst = (('Seoul', '서울특별시'), ('Incheon', '인천광역시'), ('Gyeo
 voluteer_type_lst = (('type_1', '자연환경보호활동'), ('type_2', '지역사회봉사활동'), ('type_3', '기술지원'), ('type_4', '업무보조'), 
                     ('type_5', '정서지원'), ('type_6', '기타봉사'), ('type_7', '생활지원'), ('type_8', '전문봉사'))
 
-affiliation_lst = (('volunteer', '자원봉사자'),('agency', '기관'))
-
 
 class write_post(models.Model):
     title = models.CharField(max_length=50, blank=True)
@@ -30,11 +28,14 @@ class write_post(models.Model):
     how_many = models.IntegerField(null=True, blank=True)
     
     photo = models.ImageField(blank=True, null=True)
-    memo = models.CharField(max_length=1000, blank=True)
+    memo1 = models.CharField(max_length=1000, blank=True)
+    memo2 = models.CharField(max_length=1000, blank=True)
+    memo3 = models.CharField(max_length=1000, blank=True)
+    
 
     hits = models.IntegerField(null=True, blank=True)
 
     name = models.CharField(max_length=50, blank=True)
     email = models.CharField(max_length=50, blank=True)
     phone_num = models.CharField(max_length=30)
-    affiliation = models.CharField(choices=affiliation_lst, max_length=9, null=True, blank=True)
+    affiliation = models.CharField(max_length=30, blank=True)

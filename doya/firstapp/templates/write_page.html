@@ -83,12 +83,16 @@
                     <input name='how_many'/>
                 </div>
                 <div>
-                    <label for='photo'>사진첨부</label>
-                    <input name='photo'/>
+                    <label for='memo1'>활동내용</label>
+                    <textarea id='memo1' name='memo1'></textarea>
                 </div>
                 <div>
-                    <label for='memo'>내용</label>
-                    <textarea id='memo' name='memo'></textarea>
+                    <label for='memo2'>지원방법</label>
+                    <textarea id='memo2' name='memo2'></textarea>
+                </div>
+                <div>
+                    <label for='memo3'>비고</label>
+                    <textarea id='memo3' name='memo3'></textarea>
                 </div>
                  <div>
                     <label for='name'>이름</label>
@@ -103,12 +107,9 @@
                     <input name='phone_num'/>
                 </div>
                 <div>
-                    <label for='affiliation'>소속</label>
-                    <select name='affiliation' size=1>
-                    {% for affiliation in affiliation_lst %}
-                        <option value={{ affiliation }}>{{ affiliation }}</option>
-                    {% endfor %}
-                    </select>
+                    <label for='affiliation'>봉사주관지</label>
+                    <input name='affiliation'/>
+
                 </div>
                 <button type='submit'>등록하기</button>
             </form>
