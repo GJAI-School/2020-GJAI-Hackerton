@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from firstapp import views
 
 # Create your views here.
 def main(request):
@@ -12,3 +13,9 @@ def signin(request):
 
 def logout(request):
     return redirect('main.html')
+
+def post(request):
+    return render(request, 'post.html')
+
+def write_page(request):
+    return render(request, 'write_page.html')
