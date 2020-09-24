@@ -16,6 +16,13 @@ header .head_1 {
     align-items: center;
 }
 
+header .title{
+    position: absolute;
+    left: 70px;
+    width: 200px;
+    height: 80px;
+}
+
 header .head_1_text1{
     font-family: NanumSquareRoundB;
     font-size: 20px;
@@ -192,6 +199,15 @@ header .menu_img{
     border-color: #707070;
 }
 
+.main_box2{
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+    border: solid 1px;
+    border-color: #707070;
+    margin-top: 50px;
+}
+
 .main_text1{
     display: flex;
     justify-content: center;
@@ -245,5 +261,58 @@ header .menu_img{
     height: 250px;
 }
 
+/* 회사 정보 */
+.company_info{
+    width: 100%;
+    height: 430px;
+    opacity: 0.88;
+    background-color: #ebebff;
+}
 
-/* 메인페이지 지나간 */
+.company_name{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: NanumSquareB;
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: center;
+    color: #313165;
+}
+
+.company_text{
+    white-space:nowrap
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.company_click{
+    padding-top: 70px;
+    white-space:nowrap
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NanumSquareL;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;  
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
