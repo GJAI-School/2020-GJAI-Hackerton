@@ -98,3 +98,22 @@ header .login_img{
 .menubar div{
     
 }
+
+header .join {
+    width: 46px;
+    height: 27px;
+    font-family: NanumSquareRoundL;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  header .head_2_text{
+      
+  }
+
