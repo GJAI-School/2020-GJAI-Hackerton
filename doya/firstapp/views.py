@@ -16,11 +16,9 @@ def logout(request):
 
 
 
-
+row_per_page = 10
 
 def post(request):
-    row_per_page = 10
-
     post_lst = write_post.objects.order_by('-id')[0:10]
     current_page = 1
     total_cnt = write_post.objects.all().count()
@@ -42,11 +40,11 @@ class page_helper:
     
     def getTotalPage_lst(self, total_cnt, row_per_page):
         if ((total_cnt % row_per_page == 0)):
-            self.total_pages = total_cnt / row_per_page
+            self.total_pages = total_cnt // row_per_page
             print('get total page #1')
 
         else:
-            self.total_pages = (total_cnt / row_per_page) + 1
+            self.total_pages = (total_cnt // row_per_page) + 1
             print('get total_page #2')
 
         self.total_page_lst = []
