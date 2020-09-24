@@ -82,22 +82,30 @@ header .login_img{
     margin-top: 3px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-.menubar ul{
-    position: relative;
-    /* margin: 0px;
-    padding: 0px; */
-}
+
 .menubar ul li{
     color: white;
     display: inline;
     margin: 30px;
 }
-.menubar div{
-    
+
+.menubar .right_m{
+    position: absolute;
+    right: 70px;
+    font-family: NanumSquareRoundB;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
 }
+
 
 header .join {
     width: 46px;
@@ -111,9 +119,4 @@ header .join {
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
-  }
-
-  header .head_2_text{
-      
-  }
-
+}
