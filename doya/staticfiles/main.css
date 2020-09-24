@@ -356,9 +356,9 @@ header .menu_img{
     max-width: 250px; /* 넓이를 지정 */
     height: auto; /* 높이를 지정 */
     margin: 30px; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-}
+
 .company_text{
-    white-space:nowrap;
+    white-space:nowrap
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,7 +375,7 @@ header .menu_img{
 
 .company_click{
     padding-top: 70px;
-    white-space:nowrap;
+    white-space:nowrap
     display: flex;
     justify-content: center;
     align-items: center;
