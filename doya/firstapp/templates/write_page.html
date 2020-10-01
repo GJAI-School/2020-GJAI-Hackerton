@@ -53,7 +53,7 @@
     <contain>
         <div class="bigbox">
             <div>
-                <h1>write_page</h1>
+                <h1>봉사자 모집 글쓰기</h1>
             </div>
             <div class= "form_box">
                 <form action='{% url 'write_page' %}' method='POST'> {% csrf_token %}
@@ -69,11 +69,11 @@
                         {% endfor %}
                         </select>
                     </div>
-                    <div>
+                    <div class = "write_box2">
                         <label for='term'>기간</label>
                         <input name='term'/>
                     </div>
-                    <div>
+                    <div class = "write_box3">
                         <label for='volunteer_type'>타입</label>
                         <select name='volunteer_type' size=1>
                         {% for voluteer_type in voluteer_type_lst%}
@@ -81,7 +81,7 @@
                         {% endfor %}
                         </select>
                     </div>
-                    <div>
+                    <div class = "write_box4">
                         <label for='how_many'>인원</label>
                         <input name='how_many'/>
                     </div>
@@ -93,15 +93,15 @@
                         <label for='memo2'>지원방법</label>
                         <textarea id='memo2' name='memo2'></textarea>
                     </div>
-                    <div>
+                    <div class = "write_box5">
                         <label for='memo3'>비고</label>
                         <textarea id='memo3' name='memo3'></textarea>
                     </div>
-                    <div>
+                    <div class = "write_box6">
                         <label for='name'>이름</label>
                         <input name='name'/>
                     </div>
-                    <div>
+                    <div class = "write_box7">
                         <label for='email'>이메일</label>
                         <input name='email'/>
                     </div>

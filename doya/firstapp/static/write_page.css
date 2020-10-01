@@ -206,9 +206,26 @@ header .menu_img{
 }
 
 .write_box label{
-    margin-right: 30px; 
+    margin-right: 32px; 
 }
-
 .write_box1 label{
-    margin-right: 30px; 
+    margin-right: 32px; 
+}
+.write_box2 label{
+    margin-right: 32px; 
+}
+.write_box3 label{
+    margin-right: 32px; 
+}
+.write_box4 label{
+    margin-right: 32px; 
+}
+.write_box5 label{
+    margin-right: 32px; 
+}
+.write_box6 label{
+    margin-right: 32px; 
+}
+.write_box7 label{
+    margin-right: 16px; 
 }
